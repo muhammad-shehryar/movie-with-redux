@@ -17,7 +17,7 @@ const Header = () => {
                 {navigation.map((nav,index)=>{
                     return(
                         <div>
-                            <NavLink key={nav.label} href={nav.href} className={` px-2 hover:text-neutral-50`}>
+                            <NavLink key={nav.label} to={nav.href} className={({isActive})=>`px-2 hover:text-neutral-800 ${isActive && "text-red-500"}`}>
                                 {nav.label}
                             </NavLink>
                         </div>
